@@ -71,6 +71,7 @@ from . import switchport
 from . import dns
 from . import bgp_cli
 from . import stp
+from . import port_tx_err_monitor
 
 # mock masic APIs for unit test
 try:
@@ -1755,6 +1756,9 @@ config.add_command(dns.dns)
 
 # Switchport module
 config.add_command(switchport.switchport)
+
+# Port TX error monitor module
+config.add_command(port_tx_err_monitor.port_tx_err_monitor)
 
 @config.command()
 @click.option('-y', '--yes', is_flag=True, callback=_abort_if_false,

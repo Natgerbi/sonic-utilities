@@ -73,6 +73,7 @@ from . import srv6
 from . import switch
 from . import icmp
 from . import copp
+from . import port_tx_err_monitor
 
 # Global Variables
 PLATFORM_JSON = 'platform.json'
@@ -331,6 +332,9 @@ cli.add_command(srv6.srv6)
 cli.add_command(switch.switch)
 cli.add_command(icmp.icmp)
 cli.add_command(copp.copp)
+
+# Port TX error monitor module
+cli.add_command(port_tx_err_monitor.port_tx_err_monitor)
 
 # syslog module
 cli.add_command(syslog.syslog)
